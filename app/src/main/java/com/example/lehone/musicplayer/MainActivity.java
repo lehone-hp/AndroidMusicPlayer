@@ -9,13 +9,14 @@ import android.widget.Button;
 public class MainActivity extends AppCompatActivity {
 
     private Button mPlayButton, mPauseButton, mResetButton;
+    private MediaPlayer mediaPlayer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        final MediaPlayer mediaPlayer = MediaPlayer.create(this, R.raw.p_12555214);
+        mediaPlayer = MediaPlayer.create(this, R.raw.p_12555214);
         mediaPlayer.setLooping(true);
 
         mPlayButton = (Button) findViewById(R.id.button_play);
